@@ -1,0 +1,13 @@
+#This is an example subscriptions file
+#this file should be in ~/.config/ytfzf for ytfzf to use it with the -cS or -cSI options
+
+@democracynow
+@cnn
+@aljazeeraenglish
+@dwnews
+@channel4news
+@msnbc
+@fox_news
+@outdoor_boys
+@BestFoodReviewShowEver
+@JRE-Clips
