@@ -20,7 +20,7 @@ ARG="--pages=2 \
 --preview-side=right \
 --upload-date=hour,today,week \
 --sort-by=upload_date,view_count \
---scrape=youtube ${1}"; }
+--scrape=youtube ${@}"; }
 
 
 sudo docker run --rm -i -t \
