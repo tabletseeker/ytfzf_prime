@@ -59,10 +59,6 @@ nano .config/ytfzf/subscriptions
 ```
 ./launch.sh <Search Term>,<Search Term>
 ```
-* Search with Spaces:
-```
-./launch.sh "<S e a r c h T e r m>"
-```
 * Reload Search or Subscriptions:
 ```
 Ctrl + c
