@@ -1,4 +1,4 @@
-FROM alpine:latest AS baseimage
+FROM alpine:3.21 AS baseimage
 
 RUN apk add --no-cache \
 	git \
