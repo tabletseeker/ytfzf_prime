@@ -13,8 +13,9 @@ ARG="
 --preview-side=right \
 --sort-by=upload_date"; } || \
 
-{ INV_INSTANCE="https://nyc1.iv.ggtyler.dev"; \
-ARG="--pages=2 \
+{ INV_INSTANCE="https://invidious.flokinet.to"; \
+ARG="
+--pages=2 \
 --thumb-viewer=ueberzug \
 --thumbnail-quality=maxres \
 --preview-side=right \
