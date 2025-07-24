@@ -2,27 +2,30 @@
 
 IMG="tabletseeker/ytfzf_prime"
 
-[[ -z ${1} ]] && \
-{ INV_INSTANCE="https://inv.nadeko.net"; \
-ARG="
--cS \
---fancy-subs \
---pages=1 \
---thumb-viewer=ueberzug \
---thumbnail-quality=maxres \
---preview-side=right \
---sort-by=upload_date"; } || \
-
-{ INV_INSTANCE="https://invidious.flokinet.to"; \
-ARG="
---pages=2 \
---thumb-viewer=ueberzug \
---thumbnail-quality=maxres \
---preview-side=right \
---upload-date=hour,today,week \
---sort-by=upload_date,view_count \
---scrape=youtube ${@}"; }
-
+case "${1}" in
+  "")
+  INV_INSTANCE="https://inv.nadeko.net"
+  ARG="
+  -cS
+  --fancy-subs
+  --pages=1
+  --thumb-viewer=ueberzug
+  --thumbnail-quality=maxres
+  --preview-side=right
+  --sort-by=upload_date"
+    ;;
+  *)
+  INV_INSTANCE="https://invidious.flokinet.to"
+  ARG="
+  --pages=2
+  --thumb-viewer=ueberzug
+  --thumbnail-quality=maxres
+  --preview-side=right
+  --upload-date=hour,today,week
+  --sort-by=upload_date,view_count
+  --scrape=youtube ${@}"
+    ;;
+esac
 
 sudo docker run --rm -i -t \
 	--device /dev/dri \
