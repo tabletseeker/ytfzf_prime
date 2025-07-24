@@ -1,5 +1,5 @@
 ## ytfzf_prime
-A working update of the popular terminal tool ytfzf for searching and watching Youtube videos with a thumbnail display and without ads or privacy concerns.
+A working update of the popular terminal tool ytfzf for searching and watching Youtube videos with a thumbnail display, custom invidious instance and without ads or privacy concerns.
 This project utilizes an alpine:edge Docker Container that includes an updated (fully working) version of ytfzf featuring all expected
 custmization options, X11 forwarding to display mpv on the host and a full invidious implementation to ensure optimal speed, realiability and privacy.
 
@@ -41,7 +41,6 @@ nano .config/ytfzf/subscriptions
 ```
 ./launch.sh
 ```
-
 ## Usage
 * Ensure sufficient terminal width:
 ```
@@ -63,6 +62,24 @@ nano .config/ytfzf/subscriptions
 ```
 Ctrl + c
 ```
+## Custom Invidious Instance
+With only a few simple commands you can deploy your very own customized and self-hosted invidious instance.
+* Clone Repository
+  ```
+   git clone --branch master --depth=1 https://github.com/tabletseeker/invidious
+  ```
+* Enter Directory
+  ```
+   cd invidious
+  ```
+* Deploy Invidious Docker Image
+   ```
+   docker compose up -d --no-deps --build
+   ```
+* Add your invidious address to `launch.sh`
+  ```
+  INV_INSTANCE="http://127.0.0.1:3000"
+  ```
 ## Environment Variables
 
 |  Variable                                             | Values                                                                                          
