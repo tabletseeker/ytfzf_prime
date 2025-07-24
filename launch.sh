@@ -13,7 +13,7 @@ case "${1}" in
   --thumbnail-quality=maxres
   --preview-side=right
   --sort-by=upload_date"
-    ;;
+  ;;
   *)
   INV_INSTANCE="https://invidious.flokinet.to"
   ARG="
@@ -24,7 +24,7 @@ case "${1}" in
   --upload-date=hour,today,week
   --sort-by=upload_date,view_count
   --scrape=youtube ${@}"
-    ;;
+  ;;
 esac
 
 sudo docker run --rm -i -t \
